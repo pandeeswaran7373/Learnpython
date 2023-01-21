@@ -29,6 +29,8 @@ symbols=int(input(f"How many symbols you want to create Password\n"))
 
 # print(password)
 
+#hard method
+
 password_list= []
 
 for char in range (1,eng_letters+1):
