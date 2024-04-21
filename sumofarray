@@ -1,0 +1,20 @@
+def sum_array(val):
+    
+    sum=0
+    
+    for num in val:
+
+        sum+=num
+    return sum
+        
+#collect data from user
+
+a=(input("Enter The Sum Values with Space:").split( ))
+
+int_list=[int(x) for x in a]
+
+tot=sum_array(int_list)
+
+#print the data
+
+print("sum of the total array:",tot)
