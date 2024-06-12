@@ -1,0 +1,53 @@
+from replit import clear
+#HINT: You can call clear() to clear the output in the console.
+logo = '''
+                         ___________
+                         \         /
+                          )_______(
+                          |"""""""|_.-._,.---------.,_.-._
+                          |       | | |               | | ''-.
+                          |       |_| |_             _| |_..-'
+                          |_______| '-' `'---------'` '-'
+                          )"""""""(
+                         /_________\\
+                       .-------------.
+                      /_______________\\
+'''
+
+print(logo)
+
+Bid_dic = []
+
+another = True
+
+
+def bid_challenge(name, Bid_amount):
+  values = {}
+  values["Name"] = name
+  values["Bid_amount"] = Bid_amount
+  Bid_dic.append(values)
+  #print(Bid_dic)
+
+
+def find_high_bid(Amount):
+  value = 0
+  nam = ""
+  for number in Bid_dic:
+    if value < number["Bid_amount"]:
+      value = number["Bid_amount"]
+      nam = number["Name"]
+  print(f"{nam} is the Winner!.Betting amount {value}")
+
+
+while another is True:
+  name = input("Enter Your Name: ").lower()
+  Bid = int(input("Enter the Bid Amount: "))
+  add_another = input("if You Want Another Name: Say 'yes' or 'no' ").lower()
+  bid_challenge(name, Bid)
+
+  if add_another == "yes":
+    clear()
+  else:
+    clear()
+    find_high_bid(Bid_dic)
+    another = False
